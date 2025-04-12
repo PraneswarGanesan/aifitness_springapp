@@ -8,11 +8,13 @@ import com.fitness.userservice.repository.UserRepository;
 import jakarta.validation.Valid;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class UserService {
 
     private final UserRepository userRepository;
@@ -35,6 +37,7 @@ public class UserService {
         save.setEmail(savedUser.getEmail());
         save.setFirstname(savedUser.getFirstname());
         save.setLastname(savedUser.getLastname());
+        save.setPassword(savedUser.getPassword());
         save.setCreatedAt(savedUser.getCreatedAt());
         save.setUpdatedAt(savedUser.getUpdatedAt());
         return save;
@@ -52,6 +55,7 @@ public class UserService {
         userResponse.setEmail(user.getEmail());
         userResponse.setFirstname(user.getFirstname());
         userResponse.setLastname(user.getLastname());
+        userResponse.setPassword(user.getPassword());
         userResponse.setCreatedAt(user.getCreatedAt());
         userResponse.setUpdatedAt(user.getUpdatedAt());
 
@@ -59,4 +63,8 @@ public class UserService {
     }
 
 
+    public Boolean existById(String userid) {
+        log.info("Calling User Validation APi for User id: {}", userid);
+        return userRepository.existsById(userid);
+    }
 }
