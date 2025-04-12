@@ -1,5 +1,6 @@
 # Git
 .git/
+.gitignore
 
 # Project-specific
 Distributed System Architecture/idea_arch.drawio
