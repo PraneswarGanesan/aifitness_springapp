@@ -19,4 +19,7 @@
     - Async communication between the services
     - to learn the best industry practice
 ### Contributions 
-    i love to have contributing to my repo
+    I welcome contributions to this repository!
+    To contribute:
+    * Please start by creating a pull request.
+    * Once the changes are reviewed and verified, they will be merged into the main branch, provided there are no conflict issues.
