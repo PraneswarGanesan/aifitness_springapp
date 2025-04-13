@@ -18,7 +18,7 @@ public class UserValidationService {
         log.info("Calling User Validation APi for User id: {}", userId);
         try {
             return userServiceWebClient.get()
-                    .uri("/api/users/{userId}/validate", userId) // relative URI, no localhost
+                    .uri("/api/users/{userId}/validate", userId)
                     .retrieve()
                     .bodyToMono(Boolean.class)
                     .block();
