@@ -1,0 +1,27 @@
+name: Daily Commit (IST)
+
+on:
+  schedule:
+    - cron: '30 0 * * *' # Runs daily at 6:00 AM IST (00:30 UTC)
+  workflow_dispatch:
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set current IST date
+        run: |
+          IST_DATE=$(TZ='Asia/Kolkata' date '+%Y-%m-%d %H:%M:%S %Z')
+          echo "Last update: $IST_DATE" > daily.txt
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'PraneswarGanesan'
+          git config --global user.email 'praneswarganesan@gmail.com'
+          git add daily.txt
+          git commit -m "chore: ✨ daily auto-update (IST)" || echo "No changes to commit"
+          git push
