@@ -35,7 +35,9 @@ Contributions are welcome!
 
 To contribute:
 
-1. Fork this repository and create a pull request with your changes.
-2. Once reviewed and verified, your changes will be merged into the `main` branch if there are no conflicts.
+1. Fork this repository
+2. add a new branch
+3. create a pull request
+4. Once reviewed and verified, your changes will be merged into the `main` branch if there are no conflicts.
 
 Let’s build this together 🚀
