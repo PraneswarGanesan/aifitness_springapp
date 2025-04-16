@@ -10,6 +10,7 @@ A fully-featured, AI-powered fitness application built using a microservice arch
 - Keycloak (Authentication & Authorization)
 - RabbitMQ (Spring AMQP for async communication)
 - PostgreSQL / MySQL (Database)
+- MongoDb / Redis(Database)
 - Google Gemini API (AI Integration)
 - Spring Cloud Config Server
 - Docker (Containerization)
