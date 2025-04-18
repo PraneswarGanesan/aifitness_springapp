@@ -39,5 +39,5 @@ To contribute:
 2. add a new branch
 3. create a pull request
 4. Once reviewed and verified, your changes will be merged into the `main` branch if there are no conflicts.
-we are welcome to have new contributors 
+we are welcome to have new contributors.
 Let’s build this together 🚀
